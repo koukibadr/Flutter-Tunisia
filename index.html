@@ -20,9 +20,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
     <!-- Favicon-->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    
+    <style>
+      .container-portfolio {
+        position: relative;
+        width: 50%;
+      }
+      
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      
+      .overlay-portfolio {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(84, 197, 248, 1);
+      }
+      
+      .container-portfolio:hover .overlay-portfolio {
+        opacity: 0.9;
+      }
+      
+      .text-portfolio {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      </style>
+
   </head>
   <body>
     <!-- Hero Section-->
@@ -146,15 +186,45 @@
         <p>Here we present all the packages that the community has created.</p>
       </header>
       <div>
-        <div class="row" style="width: 100%">           
-          <div class="col-lg-4 col-md-8 col-8 p-0"><a data-lightbox="image-1" data-title="My caption" class="d-block"><img src="img/shaped_bottom_bar.png" alt="..." class="img-fluid d-block mx-auto" width="60%"></a></div>
-          <div class="col-lg-4 col-md-4 col-6 p-0"><a data-lightbox="image-1" data-title="My caption" class="d-block"><img src="img/emoji_alert.png" alt="..." class="img-fluid d-block mx-auto" width="60%"></a></div>
-          <div class="col-lg-4 col-md-4 col-6 p-0"><a data-lightbox="image-1" data-title="My caption" class="d-block"><img src="img/motion_toast.png" alt="..." class="img-fluid d-block mx-auto" width="60%"></a></div>
+        <div class="row" style="width: 100%">         
+          <div class="container-portfolio col-lg-4 col-md-8 col-8 p-0">
+            <img src="img/shaped_bottom_bar.png" alt="..." class="img-fluid d-block mx-auto" width="60%">
+            <div class="overlay-portfolio">
+              <div class="text-portfolio">Shaped Bottom Bar</div>
+            </div>
+          </div>
+          <div class="container-portfolio col-lg-4 col-md-8 col-8 p-0">
+            <img src="img/emoji_alert.png" alt="..." class="img-fluid d-block mx-auto" width="60%">
+            <div class="overlay-portfolio">
+              <div class="text-portfolio">Emoji Alert</div>
+            </div>
+          </div>
+          <div class="container-portfolio col-lg-4 col-md-8 col-8 p-0">
+            <img src="img/motion_toast.png" alt="..." class="img-fluid d-block mx-auto" width="60%">
+            <div class="overlay-portfolio">
+              <div class="text-portfolio">Motion Toast</div>
+            </div>
+          </div>
         </div>
         <div class="row">           
-          <div class="col-lg-4 col-md-8 col-8 p-0"><a data-lightbox="image-1" data-title="My caption" class="d-block"><img src="img/cherry_toast.png" alt="..." class="img-fluid d-block mx-auto" width="60%"></a></div>
-          <div class="col-lg-4 col-md-8 col-8 p-0"><a data-lightbox="image-1" data-title="My caption" class="d-block"><img src="img/foldable_list.png" alt="..." class="img-fluid d-block mx-auto" width="60%"></a></div>
-          <div class="col-lg-4 col-md-8 col-8 p-0"><a data-lightbox="image-1" data-title="My caption" class="d-block"><img src="img/input_type_text.png" alt="..." class="img-fluid d-block mx-auto" width="60%"></a></div>
+          <div class="container-portfolio col-lg-4 col-md-8 col-8 p-0">
+            <img src="img/cherry_toast.png" alt="..." class="img-fluid d-block mx-auto" width="60%">
+            <div class="overlay-portfolio">
+              <div class="text-portfolio">Motion Toast</div>
+            </div>
+          </div>
+          <div class="container-portfolio col-lg-4 col-md-8 col-8 p-0">
+            <img src="img/foldable_list.png" alt="..." class="img-fluid d-block mx-auto" width="60%">
+            <div class="overlay-portfolio">
+              <div class="text-portfolio">Foldable List</div>
+            </div>
+          </div>
+          <div class="container-portfolio col-lg-4 col-md-8 col-8 p-0">
+            <img src="img/input_type_text.png" alt="..." class="img-fluid d-block mx-auto" width="60%">
+            <div class="overlay-portfolio">
+              <div class="text-portfolio">Input type text</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
